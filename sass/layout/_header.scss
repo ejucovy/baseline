@@ -1,0 +1,140 @@
+/*
+  Header styles
+*/
+
+#site-header .site-nav{
+  display:none;}
+#site-header.header-layout-flex .site-nav{
+  background-color:transparent;
+  order:4;
+  margin-left:auto;
+  margin-top:0;}
+#site-topbar{
+  min-height:53px;}
+#header-buttons-wrap{
+  height:0;
+  left:0;
+  overflow:visible;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:5;
+  pointer-events: none;}
+#header-buttons-wrap-inner{
+  position:relative;
+  pointer-events: all;}
+#header-custom-buttons{
+  display:inline-block;
+  line-height:34px;
+  margin:0 1rem;}
+.text-center #header-custom-buttons{
+  right:0;
+  margin:0;
+  position:absolute;}
+#header-buttons{
+  display:flex;
+  position:absolute;
+  right:0;
+  top:0;
+  z-index:10;}
+.text-center #header-buttons{
+  width:100%;}
+
+.bg-white + #header-buttons-wrap .button-dot:hover{
+  background-color:rgba(21,36,43,0.2);}
+
+
+#language-nav li,
+#language-nav a{
+  font-size:0.9rem;}
+
+#container #language-nav{
+  border-bottom-style:solid;
+  border-bottom-width:1px;}
+#container #language-nav.bg-transparent{
+  border:0 none;}
+#site-header #main-nav {
+  border-top-style:solid;
+  border-top-width:1px;}
+#container #main-nav.bg-transparent{
+  border:0 none;}
+
+#site-title{
+  font-size:1.5rem;
+  margin-bottom:0;}
+#site-header{
+  order:0;
+  overflow:visible; /* fixes invisible #nav-label */
+  padding:0;
+  position:relative;
+  width:100%;
+  z-index:100;}
+.header-layout-flex #site-header-inner{
+  display:flex;}
+.header-layout-flex .site-header-item{
+  display:inline-block;
+  height:2.8rem;
+  margin:0.5rem 0.75rem 0;}
+
+a.logo{
+  color:inherit;
+  display:inline-block;
+  line-height:1;
+  margin:0 auto;
+  max-height:100px;
+  max-width:250px;}
+.bg-white a.logo,
+.bg-white a.logo:hover{
+  color:inherit;}
+a.logo img{
+  max-height:110px;
+  max-width:250px;
+  object-fit:contain;}
+
+
+.header-search-form{
+  max-width:150px;
+  width:120px;}
+.header-search-form .search-form-input{
+  font-size:0.8rem;
+  padding:0.5rem;}
+
+/* Site Optons */
+.header-hide{
+  height:0 !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+  padding:0 !important;}
+
+
+/* Tablet and up */
+@media only screen and (min-width: $tablet-width ){
+
+  #site-title{
+    font-size:1.8rem;
+    margin-bottom:0;}
+  a.logo{
+    max-width:400px;}
+  a.logo img{
+    max-height:80px;
+    max-width:400px;}
+
+}
+
+
+/* Desktop and larger */
+@media only screen and (min-width: $desktop-width ){
+
+  a.logo{
+    max-width:700px;}
+  a.logo img{
+    max-height:110px;
+    max-width:700px;}
+
+  #header-buttons{
+      top:-2px;}
+  #header-buttons-wrap.text-center .section-inner{
+    margin:0 13px;
+    max-width:none;}
+
+}

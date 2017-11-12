@@ -1,0 +1,37 @@
+/*
+  Image Grid
+*/
+
+.img-grid-square-title{
+  background:rgba(0,0,0,0.6);
+  bottom:0;
+  color:#fff;
+  display:inline-block;
+  font-size:initial;
+  left:0;
+  padding:calc(2% + 1em);
+  position:absolute;
+  opacity:0;
+  -webkit-transition:0.3s opacity;
+  -moz-transition:0.3s opacity;
+  transition:0.3s opacity;
+  text-align:initial;
+  width:100%;}
+.img-grid-square-link:hover .img-grid-square-title{
+  opacity:1;}
+.img-grid-square-link{
+  background-color:rgba(0,0,0,0.1);
+  display:block;
+  text-align:center;}
+
+.img-grid-square-img{
+  display:block;
+  overflow:hidden;
+  padding-bottom:100%;
+  position:relative;}
+.img-grid-square-img img{
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  width:100%;}

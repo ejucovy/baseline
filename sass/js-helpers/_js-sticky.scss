@@ -1,0 +1,10 @@
+/*
+  Sticky
+*/
+
+.sticky-wrapper{
+  order:5;
+  width:100%;}
+.sticky-wrapper.is-sticky > *{
+  border-bottom-style:solid;
+  border-bottom-width:1px;}

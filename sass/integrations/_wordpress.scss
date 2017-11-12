@@ -1,0 +1,99 @@
+.aligncenter{
+  text-align:center;}
+.alignright{
+  text-align:right;}
+img.alignleft,
+div.alignleft{
+  float:left;
+  margin:0 1rem 1rem 0;}
+img.aligncenter,
+div.aligncenter{
+  display:block;
+  margin:0 auto;}
+img.alignright,
+div.alignright{
+  float:right;
+  margin:0 0 1rem 1rem;}
+.wp-caption img,
+.wp-caption{
+    width:auto !important;
+    max-width:100% !important;
+    height:auto !important;}
+.sidebar ul, .sidebar ol, .commentlist{
+  list-style:none}
+
+
+
+.widget{
+  border-radius:2px;
+  overflow:hidden;}
+.widget ul{
+  padding:0;}
+.widget ul li{
+  list-style-type:none;
+  margin:0;}
+.tfsf{
+  max-width: 432px;}
+
+
+
+/* Pagination and search */
+.search-form {
+  display: inline-block;
+  vertical-align: middle;
+  width:100%;
+  max-width:600px;}
+.pagination{
+  clear:both;
+  padding:2em 0;}
+.pagination:empty{
+  padding:0;}
+.pagination .search-form{
+  margin: 0 2%;
+  max-width: 400px;}
+input.search-form-submit{
+  background-color:$color-primary;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:auto 60%;
+  color:$color-light;
+  text-indent:-9999px;
+  width:60px;}
+.search-form-input-collapsible{
+  background-position:5px center;
+  background-size:20px auto;
+  cursor:pointer;
+  padding-left:32px;
+  padding-right:0;
+  transition:all 0.5s ease 0s;
+  width:30px;}
+.search-form-input-collapsible:focus{
+  border:1px solid;
+  cursor:text;
+  width:100%;}
+
+
+.pagination a.page-numbers,
+.pagination .page-numbers.current{
+  background-color:$color-primary;
+  border-radius:2px;
+  color:$color-light;
+  display:inline-block;
+  font-weight:bold;
+  margin:0;
+  padding:0.2em 0.5em;
+  text-decoration:none;}
+.page-numbers.current{
+  cursor:default;
+  opacity:0.5;}
+
+/* Mobile only */
+@media only screen and (max-width: $tablet-width ){
+
+/* default WP widgets */
+.widget_nav_menu{
+  clear:both;
+  margin:0 1%;
+  padding:1rem;}
+
+}

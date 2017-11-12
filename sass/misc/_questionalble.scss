@@ -1,0 +1,33 @@
+/*
+  Flagged for removal
+*/
+
+
+.nav-grid{}
+.nav-grid-item{
+  font-size:1.2rem;
+  font-weight:bold;
+  padding:1rem;
+  white-space:nowrap;}
+
+
+/* Tablet and up */
+@media only screen and (min-width: $tablet-width ){
+
+  .columns-bleed{
+    display:table;
+    height:100%;
+    table-layout:fixed;
+    width:100%;}
+  .columns-bleed .section-inner{
+    display:table-row;
+    height:100%;}
+  .column-bleed{
+    display:table-cell !important;
+    height:100%;}
+  .column-bleed-link{
+    display:block;
+    height:100%;
+    width:100%;}
+
+}

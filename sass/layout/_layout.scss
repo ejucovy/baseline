@@ -1,0 +1,276 @@
+/*
+  Layout
+*/
+
+.no-margin,
+.margin-none{
+  margin:0 !important;}
+.no-margin-top,
+.margin-top-none{
+  margin-top:0 !important;}
+.no-margin-bottom,
+.margin-bottom-none{
+  margin-bottom:0 !important;}
+.no-margin-left,
+.margin-left-none{
+  margin-left:0 !important;}
+.no-margin-right,
+.margin-right-none{
+  margin-right:0 !important;}
+.margin-bottom-small{
+  margin-bottom:0.4rem;}
+.margin-bottom-normal{
+  margin-bottom:0.6rem;}
+.margin-bottom-medium{
+  margin-bottom:1rem;}
+.margin-bottom-large{
+  margin-bottom:1.4rem;}
+.margin-bottom-huge{
+  margin-bottom:2rem;}
+
+.no-padding,
+.padding-none{
+  padding:0 !important;}
+.no-padding-top,
+.padding-top-none{
+  padding-top:0 !important;}
+.no-padding-bottom,
+.padding-bottom-none{
+  padding-bottom:0 !important;}
+.no-padding-left,
+.padding-left-none{
+  padding-left:0 !important;}
+.no-padding-right,
+.padding-right-none{
+  padding-right:0 !important;}
+
+/* Boxes */
+.box-small,
+.box.small{
+  padding:0.45rem 0.6rem;}
+.box,
+.box-normal{
+  padding:1rem;
+  margin-bottom:1rem;}
+.box-medium{
+  padding:1.1rem;}
+.box-big,
+.box.big{
+  padding:1.25rem 1.1rem;}
+.box-huge,
+.box.huge{
+  padding:1.4rem 1.1rem;}
+
+/* Sections */
+#container{
+  /* allows for:
+  - columned sections to be equal height, regardless of content
+  - re-ordering of sections with CSS */
+  display:flex;
+  flex-wrap:wrap;}
+.section{
+  background-position:center center;
+  background-size:cover;
+  order:5;
+  position:relative;
+  width:100%;
+  z-index:2;}
+.section-inner{
+  position:relative;
+  max-width:90vw;}
+.section-inner,
+.section.expando .expando-link{
+  margin:0 auto;}
+.section-inner::after,
+.clearfix::after{
+  clear:both;
+  content:'';
+  display:block;
+  height:0;
+  visibility:hidden;}
+
+/* Specialized section classes */
+.section-order-beforeheader{
+  order:-5;}
+.section.section-position-outer .section-inner{
+  position:static;}
+
+.title-section-60,
+.title-section{
+  align-items:center;
+  display:flex;
+  min-height:calc(100vh - 25px);
+  justify-content:center;
+  width:100%;}
+.title-section-60{
+  min-height:calc(100vh - 60px);}
+.title-section .section-inner,
+.title-section-60 .section-inner{
+  width:100%;}
+
+.padding-none{
+  padding:0;}
+.padding-tiny,
+.padding-small{
+  padding:1rem;}
+.padding-normal{
+  padding:1.3rem 1rem;}
+.padding-medium{
+  padding:2rem 1rem;}
+.padding-large{
+  padding:2.5rem 1.1rem;}
+.padding-huge{
+  padding:4rem 1.2rem;}
+.padding-gigantic{
+  padding:6rem 1.2rem;}
+
+.width-full .section-inner{
+  max-width:100%;}
+
+
+
+/* Tablet and up */
+@media only screen and (min-width: $tablet-width ){
+
+  .right,
+  .float-right{
+    float:right;}
+  .float-left{
+    float:left;}
+
+  .padding-none{
+    padding:0;}
+  .padding-tiny{
+    padding:0.8rem;}
+  .padding-small{
+    padding:1.2rem;}
+  .padding-normal{
+    padding:2.3rem;}
+  .padding-medium{
+    padding:3.5rem;}
+  .padding-large{
+    padding:7rem;}
+  .padding-huge{
+    padding:10rem;}
+  .padding-gigantic{
+    padding:13rem;}
+
+  .box-small,
+  .box.small{
+    padding:0.6rem 0.7rem;}
+  .box{
+    padding:1rem;}
+  .box-medium{
+    padding:1.25rem;}
+  .box-big,
+  .box.big{
+    padding:1.5em;}
+  .box-huge,
+  .box.huge{
+    padding:2rem;}
+
+}
+
+
+/* Tablet Only */
+@media only screen and (min-width: $tablet-width ) and (max-width: $desktop-width ){
+
+  .margin-bottom-none,
+  .tablet-margin-bottom-none{
+    margin-bottom:0;}
+  .margin-bottom-small,
+  .tablet-margin-bottom-small{
+    margin-bottom:0.4rem;}
+  .margin-bottom-normal,
+  .tablet-margin-bottom-normal{
+    margin-bottom:0.8rem;}
+  .margin-bottom-medium,
+  .tablet-margin-bottom-medium{
+    margin-bottom:1.1rem;}
+  .margin-bottom-large,
+  .tablet-margin-bottom-large{
+    margin-bottom:2rem;}
+  .margin-bottom-huge,
+  .tablet-margin-bottom-huge{
+    margin-bottom:2.2rem;}
+
+}
+
+
+/* Desktop and larger */
+@media only screen and (min-width: $desktop-width ){
+
+  .right,
+  .float-right{
+    float:right;}
+  .float-left{
+    float:left;}
+
+  .margin-bottom-none,
+  .desktop-margin-bottom-none{
+    margin-bottom:0;}
+  .margin-bottom-small,
+  .desktop-margin-bottom-small{
+    margin-bottom:0.4rem;}
+  .margin-bottom-normal,
+  .desktop-margin-bottom-normal{
+    margin-bottom:0.8rem;}
+  .margin-bottom-medium,
+  .desktop-margin-bottom-medium{
+    margin-bottom:1.5rem;}
+  .margin-bottom-large,
+  .desktop-margin-bottom-large{
+    margin-bottom:2.5rem;}
+  .margin-bottom-huge,
+  .desktop-margin-bottom-huge{
+    margin-bottom:3.2rem;}
+
+  .padding-tiny{
+    padding:0.9rem;}
+  .padding-small{
+    padding:2rem;}
+  .padding-normal{
+    padding:3rem;}
+  .padding-medium{
+    padding:4rem;}
+  .padding-large{
+    padding:7rem;}
+  .padding-huge{
+    padding:11rem;}
+  .padding-gigantic{
+    padding:14rem;}
+
+  .width-skinny .section-inner,
+  .width-skinny.expando > .expando-link{
+    max-width:450px;}
+  .width-narrow .section-inner,
+  .width-narrow.expando > .expando-link{
+    max-width:600px;}
+  .width-normal .section-inner,
+  .width-normal.expando > .expando-link{
+    max-width:750px;}
+  .width-medium .section-inner,
+  .width-medium.expando > .expando-link{
+    max-width:900px;}
+  .width-wide .section-inner,
+  .width-wide.expando > .expando-link{
+    max-width:1050px;}
+  .width-extrawide .section-inner,
+  .width-extrawide.expando > .expando-link{
+    max-width:1200px;}
+
+  .box{
+    padding:1rem;}
+  .box-small,
+  .box.small{
+    padding:0.6rem 0.7rem;}
+  .box-medium{
+    padding:1.5rem;}
+  .box-big,
+  .box.big{
+    padding:2rem;}
+  .box-huge,
+  .box.huge{
+    padding:3rem;}
+
+}

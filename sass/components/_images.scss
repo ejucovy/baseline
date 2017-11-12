@@ -1,0 +1,11 @@
+/*
+  Images styles
+*/
+
+.image-bleed{
+  display:block;
+  height:100%;
+  -webkit-object-fit:cover;
+  -o-object-fit:cover;
+  object-fit:cover;
+  width:100%;}

@@ -1,0 +1,37 @@
+/*
+  Baseline side share buttons plugin
+*/
+
+
+#side-share{
+  order:8;}
+.buttons-share-side .button-square{
+  float:right;
+  clear:both;}
+.buttons-share-side .button-square:hover{
+  width:60px;}
+
+
+/* Mobile Only */
+@media only screen and (max-width: $tablet-width ){
+
+  #side-share{
+    display:none;}
+
+}
+
+
+/* Tablet and up */
+@media only screen and (min-width: $tablet-width ){
+
+  .buttons-share-side{
+    margin-top:-75px;
+    position:fixed;
+    right:0;
+    top:50%;
+    z-index:999;}
+  .buttons-share-side-left{
+    right:auto;
+    left:0;}
+
+}

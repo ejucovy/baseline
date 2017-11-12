@@ -1,0 +1,161 @@
+/*
+  Non-standard, general purposes classes
+*/
+
+
+.clear{
+  clear:both !important;
+  display:block;
+  height:0;
+  line-height:0 !important;
+  margin:0 !important;
+  overflow:hidden;
+  padding:0 !important;
+  width:0 !important;}
+
+.hide,
+.hidden{
+  display:none !important;
+  font-size:0;
+  height:0;
+  margin:0;
+  padding:0;
+  visibility:hidden;}
+.js .js-hide{
+  display:none;}
+
+.opacity-100{
+  opacity:1;}
+.opacity-75{
+  opacity:0.75;}
+.opacity-50{
+  opacity:0.5;}
+
+
+/* Remove the little gap beneath an image due to font size/line-height issues */
+.image-link-parent{
+  font-size:0 !important;}
+
+/* Set up a block-level link that can contain multiple children
+   (usually to create a larger hit area for mobile)
+*/
+.area-link{
+  color:inherit !important;
+  display:block;
+  font-weight:inherit;
+  text-decoration:none;
+  transition:0.1s all;}
+a.area-link:hover .area-link-hover{
+  color:$color-primary;}
+
+/* Tooltip */
+.tooltip{
+ position:relative;}
+.tooltip::before{
+  background-color:rgba(247, 249, 250, 0.9);
+  border-radius:2px;
+  color:rgb(0, 0, 0) !important;
+  content:attr(title);
+  display:block;
+  font-size:0.9rem;
+  font-weight:normal;
+  line-height:1.5;
+  opacity:0;
+  overflow:hidden;
+  padding:7px 10px;
+  position:absolute;
+  right:calc(100% + 20px);
+  text-align:left;
+  text-indent:0;
+  top:0;
+  transform:translateX(250px);
+/*
+  The transitions are a little crazy so that the tooltip finishes fading in/out _before_ being being moved off-screen
+  The transforms are used b/c apparently it's cheaper to animate transforms instead of abs. positioning
+ */
+  transition:
+    0.5s opacity,
+    0.5s transform 0.5s;
+  max-width:220px;
+  min-width:150px;}
+.tooltip::after{
+  border-left:8px solid rgba(247, 249, 250, 0.9);
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  content:'';
+  height:0;
+  width:0;
+  opacity:0;
+  position:absolute;
+  right:calc(100% + 12px);
+  top:calc(50% - 8px);
+  transform:translateX(258px);
+  transition:
+    0.5s opacity,
+    0.5s transform 0.5s;}
+.tooltip:hover::before{
+  opacity:1;
+  transform:translateX(0px);
+  transition:
+    0.5s opacity,
+    0s transform;}
+.tooltip:hover::after{
+  opacity:1;
+  transform:translateX(0px);
+  transition:
+    0.5s opacity,
+    0s transform;}
+
+/* Mobile only */
+@media only screen and (max-width: $tablet-width){
+
+
+  .mobile-hide{
+    display:none !important;}
+
+  .mobile-text-left{
+    text-align:left;}
+  .mobile-text-center{
+    text-align:center;}
+  .mobile-text-right{
+    text-align:right;}
+
+  .mobile-margin-top-none{
+    margin-top:0 !important;}
+  .mobile-margin-bottom-none{
+    margin-bottom:0 !important;}
+  .mobile-margin-left-none{
+    margin-left:0 !important;}
+  .mobile-margin-right-none{
+    margin-right:0 !important;}
+
+  .mobile-margin-bottom-small{
+    margin-bottom:0.4rem;}
+  .mobile-margin-bottom-normal{
+    margin-bottom:0.6rem;}
+  .mobile-margin-bottom-medium{
+    margin-bottom:1rem;}
+  .mobile-margin-bottom-large{
+    margin-bottom:1.4rem;}
+  .mobile-margin-bottom-huge{
+    margin-bottom:2rem;}
+
+}
+
+
+/* Tablet Only */
+@media only screen and (min-width: $tablet-width ) and (max-width: $desktop-width ){
+
+  .tablet-hide{
+    display:none !important;}
+
+}
+
+
+/* Desktop and larger */
+@media only screen and (min-width: $desktop-width ){
+
+  .desktop-hide{
+    display:none !important;}
+
+}

@@ -1,0 +1,21 @@
+/*
+  Legacy support
+*/
+
+/* Tablet and up */
+@media only screen and (min-width: $tablet-width ){
+
+  .featboxes .section-inner{
+    align-items:flex-start;
+    display:-webkit-box;
+    display:flex;
+    justify-content:center;
+    padding:0 1%;
+    text-align:center;}
+  .featboxes .widget{
+    display:inline-block;
+    float:none;
+    text-align:initial;
+    vertical-align:top;}
+
+}
